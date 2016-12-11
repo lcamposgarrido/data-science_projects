@@ -1,4 +1,4 @@
-# Football project with Dixon-Coles model
+# Football Bet Project with Dixon-Coles Model
 # Luis Campos Garrido 05/08/2016
 
 # Data load
