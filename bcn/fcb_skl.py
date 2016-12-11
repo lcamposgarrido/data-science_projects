@@ -1,6 +1,6 @@
-#Created on Fri Oct 28 00:43:02 2016
-#author: Luis Campos Garrido
-#MeThinks MessiNeymarIniesta Challenge
+# Created on Fri Oct 28 00:43:02 2016
+# author: Luis Campos Garrido
+# Image Recognition via scikit-learn
 
 from scipy import misc
 import matplotlib.pyplot as plt
