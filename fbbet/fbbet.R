@@ -1,4 +1,4 @@
-# Football Project
+# Football Bet Project
 # Luis Campos Garrido 05/08/2016
 
 # Data load
