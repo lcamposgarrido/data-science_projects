@@ -29,13 +29,13 @@ def conv_net(x):
 # Load filenames and labels
 filenames = []
 labels = []
-for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/iniesta/*.jpg"):
+for filename in glob.glob("C:/Users/lcamp/Documents/fcbdata/iniesta/*.jpg"):
     filenames.append(filename)
     labels.append(1)
-for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/messi/*.jpg"):
+for filename in glob.glob("C:/Users/lcamp/Documents/fcbdata/messi/*.jpg"):
     filenames.append(filename)
     labels.append(2)
-for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/neymar/*.jpg"):
+for filename in glob.glob("C:/Users/lcamp/Documents/fcbdata/neymar/*.jpg"):
     filenames.append(filename)
     labels.append(3)
 # Shuffle samples
