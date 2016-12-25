@@ -1,6 +1,6 @@
 #Created on Fri Oct 28 00:43:02 2016
 #author: Luis Campos Garrido
-#MessiNeymarIniesta Challenge
+#Image recognition via Tensorflow
 
 #
 # TensorFlow Convolutional Network
