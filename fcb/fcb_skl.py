@@ -13,14 +13,14 @@ import pandas as pd
 #
 
 # Prueba con 1 imagen
-img = misc.imread('C:/Users/lcamp/Documents/jobs/methinks/fcbdata/iniesta/andresiniesta62.jpg')
+img = misc.imread('fcbdata/iniesta/andresiniesta62.jpg')
 type(img)
 print img.shape
 plt.figure().add_subplot(111).imshow(img)
 
 label = []
 iniesta = []
-for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/iniesta/*.jpg"):
+for filename in glob.glob("fcbdata/iniesta/*.jpg"):
     img = misc.imread(filename)
     # Scale colors from (0-255) to (0-1), then reshape to 3D array per pixel to preserve all color channels with .reshape(-1,3)
     img = (img / 255.0).reshape(-1)
@@ -29,7 +29,7 @@ for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/iniest
 iniesta = pd.DataFrame(iniesta)
 
 messi = []
-for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/messi/*.jpg"):
+for filename in glob.glob("fcbdata/messi/*.jpg"):
     img = misc.imread(filename)
     img = (img / 255.0).reshape(-1)
     messi.append(img)
@@ -37,7 +37,7 @@ for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/messi/
 messi = pd.DataFrame(messi)
 
 neymar = []
-for filename in glob.glob("C:/Users/lcamp/Documents/jobs/methinks/fcbdata/neymar/*.jpg"):
+for filename in glob.glob("fcbdata/neymar/*.jpg"):
     img = misc.imread(filename)
     img = (img / 255.0).reshape(-1)
     neymar.append(img)
