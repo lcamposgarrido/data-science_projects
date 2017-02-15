@@ -14663,7 +14663,7 @@ rJmZmZkVMCdrZmZmZgXMyZqZmZlZAft/HqaohI1hf60AAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> the k-fold cross-validation is a training technique by which the dataset is divided in k different ways, each of them with different training and testing sets. Then, the model is trained with each of the combinations and it is scored with the mean of them. Thereby, we assure the model we are going to fit is not biased for one trivial split of the data.</p>
+<p><strong>Answer: </strong> the k-fold cross-validation is a training technique by which the original dataset is randomly partitioned into k equal sized subsamples. Of the k subsamples, a single subsample is retained as the validation data for testing the model, and the remaining k − 1 subsamples are used as training data. The cross-validation process is then repeated k times (the folds), with each of the k subsamples used exactly once as the validation data. The k results from the folds can then be averaged to produce a single estimation. The advantage of this method is that all observations are used for both training and validation.</p>
 
 </div>
 </div>
@@ -14883,7 +14883,7 @@ Predicted selling price for Client 3&#39;s home: $922,740.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> the predicted selling prices for Clients 1, 2 and 3's homes are S 411,931.58, S 235,620.00 and S 922,740.00  respectively. The prices seem reasonable for the respective values: the home with the highest "Total number of rooms", lowest "Neighborhood poverty level" and lowest "Student-teacher ratio" has the highest predicted price, and vice versa.</p>
+<p><strong>Answer: </strong> the predicted selling prices for Clients 1, 2 and 3's homes are S 411,931.58, S 235,620.00 and S 922,740.00  respectively. The prices seem reasonable for the respective values: the home with the highest "Total number of rooms", lowest "Neighborhood poverty level" and lowest "Student-teacher ratio" (Client 3) has the highest predicted price, and vice versa for Client 2's home. Client 1's home is somewhere in the middle, as they are its features.</p>
 
 </div>
 </div>
