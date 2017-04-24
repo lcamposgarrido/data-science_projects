@@ -13742,7 +13742,7 @@ The most relevant features for learning both safety and efficiency are 'waypoint
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong>
-Given the selected features, the size of the state space would be two per block: the possible combinations of features are 3 (waypoint) * 2 (light) * 3 (oncoming) = 18.
+Given the selected features, the size of the state space would be two per block: the possible combinations of features are 3 (waypoint) * 2 (light) * 4 (oncoming) = 24.
 I think the number of combinations with this features selected are good enough for the agent to handle and learn a policy for each possible state.</p>
 
 </div>
@@ -17843,6 +17843,15 @@ An example of correct policy is shown below:</p>
 <li>left : 0.36</li>
 </ul>
 <p>We are facing a green light with no oncoming traffic and our target is to the right. In this particular case, the action with the highest Q-value is right, as desired.</p>
+<p>An example of suboptimal policy is shown below:</p>
+<ul>
+<li>('right', 'green', 'forward')</li>
+<li>forward : 0.35</li>
+<li>right : 0.00</li>
+<li>None : -4.05</li>
+<li>left : -15.17</li>
+</ul>
+<p>As the light is green and we want the driving agent to move right, that is the desired action, but the action with the highest Q value is forward.</p>
 
 </div>
 </div>
@@ -17873,8 +17882,7 @@ An example of correct policy is shown below:</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong>
-As the agent stops receiving rewards when it reaches destination, maybe if it is biased with future rewards, it ends up driving around the goal without wanting to actually reach it.</p>
+<p><strong>Answer:</strong></p>
 
 </div>
 </div>
