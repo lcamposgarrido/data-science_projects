@@ -18,9 +18,9 @@ from sklearn.neural_network import MLPClassifier
 def get_data(symbol):
 
     # Technical Indicators
-    ti = TechIndicators(key='4BTFICZGTPWZRRQS', output_format='pandas')
+    ti = TechIndicators(key='YOUR_API_KEY', output_format='pandas')
     sma, _ = ti.get_sma(symbol=symbol, interval='daily')
-    wma, _ = ti.get_wma(symbol='SPX', interval='daily')
+    wma, _ = ti.get_wma(symbol=symbol, interval='daily')
     ema, _ = ti.get_ema(symbol=symbol, interval='daily')
     macd, _ = ti.get_macd(symbol=symbol, interval='daily')
     stoch, _ = ti.get_stoch(symbol=symbol, interval='daily')
@@ -28,14 +28,14 @@ def get_data(symbol):
     adx, _ = ti.get_adx(symbol=symbol, interval='daily')
     cci, _ = ti.get_cci(symbol=symbol, interval='daily')
     aroon, _ = ti.get_aroon(symbol=symbol, interval='daily')
-    bbands, _ = ti.get_bbands(symbol='SPX', interval='daily')
-    ad, _ = ti.get_ad(symbol='SPX', interval='daily')
-    obv, _ = ti.get_obv(symbol='SPX', interval='daily')
-    mom, _ = ti.get_mom(symbol='SPX', interval='daily')
-    willr, _ = ti.get_willr(symbol='SPX', interval='daily')
+    bbands, _ = ti.get_bbands(symbol=symbol, interval='daily')
+    ad, _ = ti.get_ad(symbol=symbol, interval='daily')
+    obv, _ = ti.get_obv(symbol=symbol, interval='daily')
+    mom, _ = ti.get_mom(symbol=symbol, interval='daily')
+    willr, _ = ti.get_willr(symbol=symbol, interval='daily')
     tech_ind = pd.concat([sma, ema, macd, stoch, rsi, adx, cci, aroon, bbands, ad, obv, wma, mom, willr], axis=1)
 
-    ts = TimeSeries(key='4BTFICZGTPWZRRQS', output_format='pandas')
+    ts = TimeSeries(key='YOUR_API_KEY', output_format='pandas')
     close = ts.get_daily(symbol=symbol, outputsize='full')[0]['close']   # compact/full
     direction = (close > close.shift()).astype(int)
     target = direction.shift(-1).fillna(0).astype(int)
